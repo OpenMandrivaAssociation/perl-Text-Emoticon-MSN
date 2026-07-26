@@ -1,15 +1,13 @@
 %define upstream_name    Text-Emoticon-MSN
-%define upstream_version 0.04
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	6
+Version:	0.04
+Release:	7
 
 Summary:	Emoticon filter of MSN Messenger
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://metacpan.org/dist/Text-Emoticon-MSN
-Source0:	https://cpan.metacpan.org/authors/id/M/MI/MIYAGAWA/Text-Emoticon-MSN-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/M/MI/MIYAGAWA/Text-Emoticon-MSN-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -23,7 +21,7 @@ Text::Emoticon::MSN is a text filter that replaces text emoticons like
 http://messenger.msn.com/Resource/Emoticons.aspx
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
