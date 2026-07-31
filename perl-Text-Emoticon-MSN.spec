@@ -2,7 +2,7 @@
 %define upstream_version 0.04
 Name:		perl-%{upstream_name}
 Version:	0.04
-Release:	8
+Release:	9
 
 Summary:	Emoticon filter of MSN Messenger
 License:	GPL+ or Artistic
