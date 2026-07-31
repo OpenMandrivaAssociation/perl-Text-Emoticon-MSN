@@ -2,7 +2,7 @@
 %define upstream_version 0.04
 Name:		perl-%{upstream_name}
 Version:	0.04
-Release:	10
+Release:	1
 
 Summary:	Emoticon filter of MSN Messenger
 License:	GPL+ or Artistic
@@ -26,18 +26,18 @@ http://messenger.msn.com/Resource/Emoticons.aspx
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
-%make
-
+%make_build
 %check
 # soft: do not fail package on test failures
 set +e
+make test || :
 %make test || :
 
 %install
 %makeinstall_std
 
 %files
-%doc Changes
+%doc Changes META.yml
 %{_mandir}/man3/*
 %{perl_vendorlib}/*
 
